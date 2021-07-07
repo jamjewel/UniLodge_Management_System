@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="559.0"
+	prefWidth="807.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2"
+	fx:controller="controller.RoomDetailController">
+	<children>
+		<VBox layoutX="0.0" layoutY="0.0" maxHeight="-Infinity" maxWidth="-Infinity"
+			minHeight="-Infinity" minWidth="-Infinity" prefHeight="559.0"
+			prefWidth="403.5">
+			<children>
+				<ImageView fx:id="roomImageView" fitHeight="280.0"
+					fitWidth="395.0" pickOnBounds="true" preserveRatio="false">
+					<image>
+						<Image url="@images/image_not_available.png" />
+					</image>
+					<VBox.margin>
+						<Insets bottom="5.0" left="5.0" right="5.0" top="5.0"
+							fx:id="x4" />
+					</VBox.margin>
+				</ImageView>
+				<HBox fillHeight="true" prefHeight="30.0" prefWidth="509.0">
+					<children>
+						<Label alignment="CENTER_LEFT" minWidth="-Infinity"
+							prefWidth="180.0" text="Room ID:">
+							<font>
+								<Font name="System Bold" size="15.0" fx:id="x1" />
+							</font>
+						</Label>
+						<Label fx:id="roomIdLabel" minWidth="-Infinity" prefHeight="30.0"
+							prefWidth="180.0" text="">
+							<font>
+								<Font size="15.0" fx:id="x2" />
+							</font>
+							<HBox.margin>
+								<Insets left="20.0" />
+							</HBox.margin>
+						</Label>
+					</children>
+					<padding>
+						<Insets bottom="2.0" left="20.0" right="20.0" top="2.0"
+							fx:id="x3" />
+					</padding>
+				</HBox>
+				<HBox fillHeight="true" padding="$x3" prefHeight="30.0"
+					prefWidth="509.0">
+					<children>
+						<Label alignment="CENTER_LEFT" font="$x1" minWidth="-Infinity"
+							prefWidth="180.0" text="Room Type:" />
+						<Label fx:id="roomTypeLabel" font="$x2" minWidth="-Infinity"
+							prefHeight="30.0" prefWidth="180.0" text="">
+							<HBox.margin>
+								<Insets left="20.0" />
+							</HBox.margin>
+						</Label>
+					</children>
+				</HBox>
+				<HBox fillHeight="true" padding="$x3" prefHeight="30.0"
+					prefWidth="509.0">
+					<children>
+						<Label alignment="CENTER_LEFT" font="$x1" minWidth="-Infinity"
+							prefWidth="180.0" text="Room Status:" />
+						<Label fx:id="roomStatusLabel" font="$x2" minWidth="-Infinity"
+							prefHeight="30.0" prefWidth="180.0" text="">
+							<HBox.margin>
+								<Insets left="20.0" />
+							</HBox.margin>
+						</Label>
+					</children>
+				</HBox>
+				<HBox fillHeight="true" padding="$x3" prefHeight="30.0"
+					prefWidth="509.0">
+					<children>
+						<Label alignment="CENTER_LEFT" font="$x1" minWidth="-Infinity"
+							prefWidth="180.0" text="No. of Beds:" />
+						<Label fx:id="noOfBedsLabel" font="$x2" minWidth="-Infinity"
+							prefHeight="30.0" prefWidth="180.0" text="">
+							<HBox.margin>
+								<Insets left="20.0" />
+							</HBox.margin>
+						</Label>
+					</children>
+				</HBox>
+				<HBox fillHeight="true" padding="$x3" prefHeight="30.0"
+					prefWidth="530.0">
+					<children>
+						<Label alignment="CENTER_LEFT" font="$x1" minWidth="-Infinity"
+							prefHeight="50.0" prefWidth="180.0" text="Feature Summary:" />
+						<Label fx:id="featureSummaryLabel" font="$x2" minWidth="-Infinity"
+							prefHeight="50.0" prefWidth="291.0" text="">
+							<HBox.margin>
+								<Insets left="20.0" />
+							</HBox.margin>
+						</Label>
+					</children>
+				</HBox>
+				<HBox fillHeight="true" minWidth="406.0" padding="$x3"
+					prefHeight="44.0" prefWidth="406.0" snapToPixel="true">
+					<children>
+						<Button font="$x2" maxHeight="-Infinity" maxWidth="-Infinity"
+							minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+							onAction="#handleRentRoomClick" prefHeight="30.0" prefWidth="180.0"
+							text="Rent">
+							<HBox.margin>
+								<Insets bottom="5.0" left="5.0" right="5.0" top="5.0"
+									fx:id="x4" />
+							</HBox.margin>
+						</Button>
+						<Button font="$x2" maxHeight="-Infinity" maxWidth="-Infinity"
+							minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+							onAction="#handleReturnRoomClick" prefHeight="30.0" prefWidth="180.0"
+							text="Return" HBox.margin="$x4" />
+					</children>
+				</HBox>
+				<HBox fillHeight="true" minWidth="406.0" prefHeight="44.0"
+					prefWidth="406.0" snapToPixel="true">
+					<children>
+						<Button font="$x2" maxHeight="-Infinity" maxWidth="-Infinity"
+							minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+							onAction="#handleMaintenanceRoomClick" prefHeight="30.0"
+							prefWidth="180.0" text="Maintenance" HBox.margin="$x4" />
+						<Button font="$x2" maxHeight="-Infinity" maxWidth="-Infinity"
+							minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+							onAction="#handleCompleteMaintenanceRoomClick" prefHeight="30.0"
+							prefWidth="180.0" text="Complete Maintenance" HBox.margin="$x4" />
+					</children>
+					<padding>
+						<Insets bottom="2.0" left="20.0" right="20.0" top="2.0"
+							fx:id="x5" />
+					</padding>
+				</HBox>
+			</children>
+		</VBox>
+		<ScrollPane hbarPolicy="AS_NEEDED" layoutX="406.0" layoutY="5.0"
+			prefHeight="554.0" prefWidth="388.0" vbarPolicy="AS_NEEDED">
+			<content>
+				<ListView fx:id="hiringRecordsListView" prefHeight="539.0"
+					prefWidth="376.0" />
+			</content>
+		</ScrollPane>
+	</children>
+</AnchorPane>

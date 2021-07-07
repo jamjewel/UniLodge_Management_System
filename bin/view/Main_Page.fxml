@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="mainAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="810.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.MainController">
+  <children>
+    <MenuBar layoutX="-3.0" layoutY="0.0" prefHeight="30.0" prefWidth="814.0">
+      <effect>
+        <ColorAdjust contrast="-0.05" hue="0.1" saturation="0.55" />
+      </effect>
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#handleImportDataFromFileClick" text="Import" />
+            <MenuItem mnemonicParsing="false" onAction="#handleExportDataToFileClick" text="Export" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Add">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#handleAddStandardRoomClick" text="Standard Room" />
+            <MenuItem mnemonicParsing="false" onAction="#handleAddSuiteRoomClick" text="Suite Room" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Exit">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#handleCloseClick" text="Save and Close" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <ScrollPane hbarPolicy="AS_NEEDED" layoutX="1.0" layoutY="30.0" prefHeight="470.0" prefWidth="809.0" vbarPolicy="AS_NEEDED">
+      <content>
+        <ListView fx:id="mainListView" prefHeight="455.0" prefWidth="806.0" />
+      </content>
+    </ScrollPane>
+    <ImageView fitHeight="130.0" fitWidth="270.0" layoutX="0.0" layoutY="500.0" pickOnBounds="true" preserveRatio="false">
+      <image>
+        <Image url="@images/standard_room_R_101.jpg" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="130.0" fitWidth="270.0" layoutX="540.0" layoutY="500.0" pickOnBounds="true" preserveRatio="false">
+      <image>
+        <Image url="@images/suite_room_S_201.jpg" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="130.0" fitWidth="270.0" layoutX="270.0" layoutY="500.0" pickOnBounds="true" preserveRatio="false">
+      <image>
+        <Image url="@images/city_lodge_logo.png" />
+      </image>
+    </ImageView>
+  </children>
+  <effect>
+    <InnerShadow />
+  </effect>
+</AnchorPane>

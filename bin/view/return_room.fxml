@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="165.9609375" prefWidth="456.0"
+	xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2"
+	fx:controller="controller.ReturnRoomController">
+	<children>
+		<Button layoutX="199.0" layoutY="102.0" mnemonicParsing="false"
+			onAction="#handleSubmit" text="Submit" />
+		<Label layoutX="37.0" layoutY="43.0" prefHeight="17.0"
+			prefWidth="104.0" text="Enter Return Date" />
+		<TextField fx:id="returnDateField" layoutX="277.0" layoutY="38.0" />
+		<Label alignment="CENTER" contentDisplay="CENTER" layoutX="298.0"
+			layoutY="74.0" prefHeight="17.0" prefWidth="104.0" text=" (dd/MM/yyyy) " />
+	</children>
+</AnchorPane>
